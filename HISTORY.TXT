@@ -1,8 +1,9 @@
 ***   VirtuaWin Revision History   ***
 --------------------------------------
 
-Ver 4.5 2016/03/05
+Ver 4.5 2018/09/15
 
+* Added module reload in Module API
 * 235 Corrected message sent for ALT key modifier for release
 * 232 Somewhat patchy fix of unexpected crash. Dynamic taskbar support should probably be rechecked on newer win versions
 * Fixed 1 byte scribble in vwModuleLoad

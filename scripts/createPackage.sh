@@ -42,7 +42,7 @@ if [ -z "$SETUPCOMPILER" ] ; then
     SETUPCOMPILER="${VWPROGRAMFILES}/Inno Setup 5/Compil32"
 fi
 if [ -z "$WINZIP" ] ; then
-    WINZIP="${VWPROGRAMFILES}/WinZip/wzzip"
+    WINZIP="${VWPROGRAMFILES}/7-Zip/7z"
 fi
 
 if [ -z "$1" ] ; then
@@ -80,13 +80,13 @@ fi
 
 echo Creating VirtuaWin package: $version - $file_ver
 
-if [ -z "$TEST_PACKAGE" ] ; then
-    mkdir -p ./$file_ver
-    cd ./$file_ver
-
-    cvs checkout README.TXT
-    cvs update -d
-fi
+#if [ -z "$TEST_PACKAGE" ] ; then
+#    mkdir -p ./$file_ver
+#    cd ./$file_ver
+#
+#    cvs checkout README.TXT
+#    cvs update -d
+#fi
 
 if [ -z "$ver_bno" ] ; then
     ver_bno=`grep FILEVERSION VirtuaWin.rc | awk -F"," '{ print $4+1 }'`
@@ -209,7 +209,7 @@ if [ $REPLY == 'y' ] ; then
     cd ../portable
     rm -f VirtuaWin_portable_$file_ver.zip
     if [ -z "$ZIP" ] ; then
-        "$WINZIP" VirtuaWin_portable_$file_ver.zip -P @./scripts/portable_filelist
+        "$WINZIP" a VirtuaWin_portable_$file_ver.zip @../../scripts/portable_filelist
     else
         $ZIP -9 -r -@ < ../../scripts/portable_filelist
         mv zip.zip VirtuaWin_portable_$file_ver.zip
@@ -223,7 +223,7 @@ if [ $REPLY == 'y' ] ; then
     cd ../portable_unicode
     rm -f VirtuaWin_portable_unicode_$file_ver.zip
     if [ -z "$ZIP" ] ; then
-        "$WINZIP" VirtuaWin_portable_unicode_$file_ver.zip -P @./scripts/portable_filelist
+        "$WINZIP" a VirtuaWin_portable_unicode_$file_ver.zip @../../scripts/portable_filelist
     else
         $ZIP -9 -r -@ < ../../scripts/portable_filelist
         mv zip.zip VirtuaWin_portable_unicode_$file_ver.zip
@@ -234,7 +234,7 @@ if [ $REPLY == 'y' ] ; then
     echo Creating source package
     rm -f VirtuaWin_source_$file_ver.zip
     if [ -z "$ZIP" ] ; then
-        "$WINZIP" VirtuaWin_source_$file_ver.zip -P @./scripts/filelist
+        "$WINZIP" a VirtuaWin_source_$file_ver.zip @./scripts/filelist
     else
         $ZIP -9 -@ < ./scripts/filelist
         mv zip.zip VirtuaWin_source_$file_ver.zip
@@ -244,7 +244,7 @@ if [ $REPLY == 'y' ] ; then
     rm -f VirtuaWin_SDK_$file_ver.zip
     cd Module
     if [ -z "$ZIP" ] ; then
-        "$WINZIP" ../VirtuaWin_SDK_$file_ver.zip -P @../scripts/SDK_filelist
+        "$WINZIP" a ../VirtuaWin_SDK_$file_ver.zip @../scripts/SDK_filelist
     else
         $ZIP -9 -@ < ../scripts/SDK_filelist
         mv zip.zip ../VirtuaWin_SDK_$file_ver.zip
@@ -270,19 +270,20 @@ if [ $REPLY == 'y' ] ; then
     mv ./VirtuaWin_SDK_$file_ver.zip ../Distribution/
 fi
 
-read -p "Commit changes? [y/n] " -n 1
-echo
-if [ $REPLY == 'y' ] ; then
-    echo Committing changes with comment: Changed to V$version
-    cvs commit -m "Changed to V$version"
-fi
+#read -p "Commit changes? [y/n] " -n 1
+#echo
+#if [ $REPLY == 'y' ] ; then
+#    echo Committing changes with comment: Changed to V$version
+#    cvs commit -m "Changed to V$version"
+#fi
 
-read -p "Label repository? [y/n] " -n 1
+read -p "Tag repository? [y/n] " -n 1
 echo
 if [ $REPLY == 'y' ] ; then
     export LABEL=`echo V$file_ver | sed s/'\.'/_/g`
     echo Labelling with: $LABEL
-    cvs tag -R -F $LABEL
+    git tag -a $LABEL
+	git push origin --tags
 fi
 
 read -p "Upload to SourceForge? [y/n] " -n 1

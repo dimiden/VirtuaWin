@@ -8,7 +8,7 @@ IDI_VIRTUAWIN ICON "../Icons/virtuawin.ico"
 
 IDD_MAINDIALOG DIALOG 79, 25, 377, 226
 STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "WinList v4.4"
+CAPTION "WinList v4.5"
 FONT 8, "Helv"
 BEGIN
     LTEXT           "Use this module to restore windows that might have been lost. Mark the window that you want to restore and press the Restore button. Press Undo if you accidently restored the wrong window.", 
@@ -50,7 +50,7 @@ BEGIN
             VALUE "FileDescription", vwVIRTUAWIN_NAME " Window List & Recovery\0"
             VALUE "FileVersion", "4.4.0.15\0"
             VALUE "InternalName", "WinList\0"
-            VALUE "LegalCopyright", "Copyright © 1999-2014\0"
+            VALUE "LegalCopyright", "Copyright © 1999-2018\0"
             VALUE "OriginalFilename", "WinList.exe\0"
             VALUE "ProductName", vwVIRTUAWIN_NAME " WinList\0"
             VALUE "ProductVersion", "4.4.0.15\0"

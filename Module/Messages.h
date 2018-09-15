@@ -6,7 +6,7 @@
  *  ConfigParameters.h - Dfinition of all module messages
  * 
  *  Copyright (c) 1999-2005 Johan Piculell
- *  Copyright (c) 2006-2012 VirtuaWin (VirtuaWin@home.se)
+ *  Copyright (c) 2006-2018 VirtuaWin (VirtuaWin@home.se)
  * 
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -171,6 +171,8 @@
 #define VW_APPLYRULES   (WM_USER + 49)
 /* Message, returns the Expert setting of Invert Up/Down, 1 = enabled, 0 otherwise */
 #define VW_INVERTY      (WM_USER + 50)
+/* Message, reloads modules */
+#define VW_MODRELOAD    (WM_USER + 51)
 
 
 /* Message, sent by VirtuaWin after a switch. lParam will contain current desktop number 
