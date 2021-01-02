@@ -39,7 +39,7 @@ if [ -z "$HELPCOMPILER" ] ; then
     HELPCOMPILER="${VWPROGRAMFILES}/HTML Help Workshop/hhc"
 fi
 if [ -z "$SETUPCOMPILER" ] ; then
-    SETUPCOMPILER="${VWPROGRAMFILES}/Inno Setup 5/Compil32"
+    SETUPCOMPILER="${VWPROGRAMFILES}/Inno Setup 6/Compil32"
 fi
 if [ -z "$WINZIP" ] ; then
     WINZIP="${VWPROGRAMFILES}/7-Zip/7z"
