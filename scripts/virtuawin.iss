@@ -3,9 +3,9 @@
 [Setup]
 AppName=VirtuaWin
 AppVerName=VirtuaWin v4.5
-DefaultDirName={pf}\VirtuaWin
+DefaultDirName={commonpf}\VirtuaWin
 DefaultGroupName=VirtuaWin
-MinVersion=5.0
+MinVersion=6.1sp1
 Uninstallable=1
 OutputDir=.\output
 SolidCompression=yes
@@ -14,7 +14,7 @@ LicenseFile=COPYING.TXT
 PrivilegesRequired=none
 
 [Languages]
-Name: en; MessagesFile: VirtuaWin5.0.ISL
+Name: en; MessagesFile: VirtuaWin6.0.ISL
 
 [Tasks]
 Name: autostart; Description: "Run automatically on Windows startup"
