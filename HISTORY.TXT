@@ -2,8 +2,10 @@
 ***   VirtuaWin Revision History   ***
 --------------------------------------
 
-Ver 4.5 2021/01/02
+Ver 4.5 2021/01/16
 
+* Updated Inno setup
+* Changed contact mail
 * Added module reload in Module API
 * 235 Corrected message sent for ALT key modifier for release
 * 232 Somewhat patchy fix of unexpected crash. Dynamic taskbar support should probably be rechecked on newer win versions
