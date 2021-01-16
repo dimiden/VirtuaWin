@@ -76,5 +76,5 @@ The following is an example of processing the WM_COPYDATA message:
 
 Check example files for additional info on how to use and handle the different
 messages and mail any requests or questions to the SourceForge Questions forum
-or to VirtuaWin@home.se
+or to virtuawin@piculell.se
 

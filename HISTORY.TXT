@@ -2,7 +2,7 @@
 ***   VirtuaWin Revision History   ***
 --------------------------------------
 
-Ver 4.5 2018/09/15
+Ver 4.5 2021/01/02
 
 * Added module reload in Module API
 * 235 Corrected message sent for ALT key modifier for release

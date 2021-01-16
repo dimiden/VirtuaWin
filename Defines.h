@@ -29,7 +29,7 @@
 /* Application name and version defines */
 #define vwVIRTUAWIN_NAME         _T("VirtuaWin")
 #define vwVIRTUAWIN_CLASSNAME    _T("VirtuaWinMainClass")
-#define vwVIRTUAWIN_EMAIL        _T("VirtuaWin@home.se")
+#define vwVIRTUAWIN_EMAIL        _T("virtuawin@piculell.se")
 #define vwVIRTUAWIN_NAME_VERSION _T("VirtuaWin v4.5")
 #define vwVIRTUAWIN_WEBSITE      _T("https://virtuawin.sourceforge.io/")
 #define vwVIRTUAWIN_MODULES_URL  vwVIRTUAWIN_WEBSITE _T("modules.php")
