@@ -149,7 +149,7 @@ if [ $REPLY == 'y' ] ; then
     cp ./HISTORY.TXT ./tmp/standard/
     cp ./COPYING.TXT ./tmp/standard/
     cp ./Help/VirtuaWin.chm ./tmp/standard/VirtuaWin.chm
-    cp ./scripts/VirtuaWin5.0.ISL ./tmp/standard/
+    cp ./scripts/VirtuaWin6.0.ISL ./tmp/standard/
     cp ./scripts/virtuawin.iss ./tmp/standard/
     echo done standard
     echo copying portable
@@ -181,7 +181,7 @@ if [ $REPLY == 'y' ] ; then
     cp ./HISTORY.TXT ./tmp/unicode/
     cp ./COPYING.TXT ./tmp/unicode/
     cp ./Help/VirtuaWin.chm ./tmp/unicode/VirtuaWin.chm
-    cp ./scripts/VirtuaWin5.0.ISL ./tmp/unicode/
+    cp ./scripts/VirtuaWin6.0.ISL ./tmp/unicode/
     cat ./scripts/virtuawin.iss | sed -e "s/^AppVerName=VirtuaWin/AppVerName=VirtuaWin Unicode/" > ./tmp/unicode/virtuawin.iss
     echo done unicode
     echo copying portable_unicode
